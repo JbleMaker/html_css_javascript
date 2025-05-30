@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    font-size: 62.5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-optical-sizing: auto;
+    /*
+        웹의 기본 폰트사이즈는 16px -> 1rem -> 10px 
+    */
+}
+
+.box1 {
+    margin: 3rem;
+    border-width: 3rem;
+    border-style: solid;
+    padding: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: red;
+}
+
+.box2 {
+    margin: 2rem;
+    border: 0.1rem solid black;
+    padding: 1rem;
+    width: 10rem;
+}
+
+.box3{
+    display: block;
+    margin: 2rem;
+    border: 0.1rem solid black;
+    line-height: 2rem;
+}
+
+.login-container{
+    box-sizing: border-box;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.8rem;
+    padding: 2.1rem 2rem 1.8rem;
+    width: 42rem;
+    height: 16.4rem;
+    
+}
+
+.login-info-message {
+    margin: 0rem;
+    text-align: center;
+    font-size: 1.47rem;
+}
+
+.login-btn {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.3rem;
+    border: 0.1rem solid rgba(0, 0, 0, .06);
+    border-radius: 0.4rem;
+    padding: 1.7rem 0rem;
+    outline: none;
+    background-color: #03c75a;
+    cursor: pointer;
+}
+
+.login-btn span {
+    padding: 0rem 1.7rem;
+    color: white;
+    font-size: 1.47rem;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    font-size:1.47rem;
+}
+
+.login-bottom {
+    text-align: center;
+    margin-top: 1.6rem;
+    padding: 0rem;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.login-bottom > a {
+    font-size: 1.365rem;
+    color:#606060;
+    cursor:pointer;
+}
+
+.bar {
+    display: inline;
+    margin: 0.4rem 1.2rem 0;
+    height: 1.2rem;
+    border: 0.1rem solid #d3d5d7;
+}

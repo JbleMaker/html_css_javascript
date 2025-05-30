@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-style: italic;
+        }
+
+        p {
+            color: green;
+            font-size: 15px;
+        }
+
+        #p {
+            color: red;
+            font-size: 20px;
+        }
+
+        .p {
+            color: blue;
+            font-size: 25px;
+        }
+
+        div>h1>.naver {
+            color: brown;
+        }
+
+        .naver {
+            color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>제목</h1>
+    <div>내용1</div>
+    <p>내용 2-1</p>
+    <p id="p">내용 2-2</p>
+    <p class="p">내용 2-3</p>
+    <p class="p" id="p">내용 2-3</p>
+    <span>내용3</span>
+
+    <div>
+        <h1>
+            <a class="naver" href="http://naver.com">NAVER</a>
+        </h1>
+    </div>
+</body>
+
+</html>
