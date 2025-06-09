@@ -12,39 +12,46 @@ function handleRegisterOnkeyup(event) {
   };
 }
 
-const handleRegisterOnclick = (event) => {
-  studentInputValues["id"] = 1;
-
-  let lastStudent = null;
-  if (studentList.length > 0) {
-    lastStudent = studentList[studentList.length - 1];
-    studentInputValues["id"] = lastStudent.id + 1;
+async function registerStudentRequest() {
+  try {
+    const requestURL = "http://localhost:8080/api/js/students";
+    const requestBody = JSON.stringify(studentInputValues);
+    const response = await fetch(requestURL, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: requestBody,
+    });
+    const responseJson = await response.json();
+    console.log(responseJson);
+    console.log(response);
+  } catch (error) {
+    console.error(error);
   }
+}
 
-  studentList = [...studentList, studentInputValues];
-  studentInputValues = {
-    id: 0,
-    name: "",
-    age: "",
-    address: "",
-  };
-  console.log(studentList);
+const handleRegisterOnclick = (event) => {
+  registerStudentRequest();
   loadStudentList();
 };
 
 function studentRegister() {
   return `
     <div>
+      이름 :
       ${studentRegisterInput({
         type: "text",
         name: "name",
         onkeyup: "handleRegisterOnkeyup",
       })}
+      나이 :
       ${studentRegisterInput({
         type: "text",
         name: "age",
         onkeyup: "handleRegisterOnkeyup",
       })}
+      주소 :
       ${studentRegisterInput({
         type: "text",
         name: "address",
